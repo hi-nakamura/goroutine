@@ -17,8 +17,7 @@ func (this *Count) CountDown() {
     }
 }
 
-func CountDown(name string, start_count int, done chan bool) {
+func CountDown(name string, start_count int) {
     count := &Count{name, start_count}
     count.CountDown()
-    done <- true
 }
